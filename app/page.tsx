@@ -14,6 +14,7 @@ interface Course {
   title: string;
   description?: string;
   optional?: boolean;
+  important?: boolean;
 }
 
 interface Curriculum {
@@ -71,9 +72,15 @@ export default function Home() {
           title: "Fundamentals of Programming",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+          important: true,
         },
         {
           title: "Maths for CS",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+        },
+        {
+          title: "Communication Skills, Networking and Team Building",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
         },
@@ -82,12 +89,18 @@ export default function Home() {
     {
       title: "Term 2",
       courses: [
+        // {
+        //   title: "Data Structures and Algorithms",
+        // },
         {
-          title: "Java and Object-oriented programming",
+          title: "Object-oriented programming",
+          important: true,
         },
+
         {
-          title: "Data Structures and Algorithms",
+          title: "Probability and Statistics",
         },
+
         {
           title: "Problem Solving and Logical Thinking",
         },
@@ -100,17 +113,21 @@ export default function Home() {
     {
       title: "Term 3",
       courses: [
+        // {
+        //   title: "Intermediate Data Structures and Algorithms",
+        // },
         {
-          title: "Database management systems",
-        },
-        {
-          title: "Communication Skills, Networking and Team Building",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+          title: "Data Structures and Algorithms",
+          important: true,
         },
         {
           title: "Internet 101",
         },
+        {
+          title: "Database management systems",
+          important: true,
+        },
+
         {
           title: "Elective 1",
           optional: true,
@@ -121,10 +138,15 @@ export default function Home() {
       title: "Term 4",
       courses: [
         {
-          title: "Operating System",
+          title: "Intermediate Data Structures and Algorithms",
+          important: true,
         },
         {
-          title: "Data Structures and Algorithms 2",
+          title: "Operating System",
+          important: true,
+        },
+        {
+          title: "Internet 101",
         },
 
         {
@@ -137,13 +159,18 @@ export default function Home() {
       title: "Term 5",
       courses: [
         {
+          title: "Advance Data Structures and Algorithms",
+          important: true,
+        },
+        {
           title: "Python and Machine Learning",
         },
         {
           title: "Productivity and Work Efficiency",
         },
         {
-          title: "Data Structures and Algorithms 3",
+          title: "Elective ",
+          optional: true,
         },
         {
           title: "Elective 3",
@@ -162,7 +189,8 @@ export default function Home() {
           title: "Discrete mathematics",
         },
         {
-          title: "Data Structures and Algorithms 4",
+          title: "Computer Networks ",
+          important: true,
         },
         {
           title: "Elective 6",
@@ -294,7 +322,13 @@ export default function Home() {
           <div></div>
         </nav>
         <div className="flex justify-center items-center h-screen">
-          <div>Neon International School of technology</div>
+          <div className="text-[40px] font-bold flex">
+            <span className="border-b-4 border-orange-700 mr-1">Neon</span>
+            <div className="border-b-4 border-blue-700 mr-1">International</div>
+            <div className="border-b-4 border-purple-700">
+              School of technology
+            </div>
+          </div>
         </div>
       </Wrapper>
       <Wrapper>
@@ -347,7 +381,8 @@ export default function Home() {
                           <div
                             className={cn(
                               "font-medium bg-red-100 p-1 rounded-lg",
-                              course.optional && "bg-green-100"
+                              course.optional && "bg-blue-100",
+                              course.important && "bg-teal-100"
                             )}
                           >
                             <div>{course.title}</div>
@@ -383,7 +418,8 @@ export default function Home() {
                           <div
                             className={cn(
                               "font-medium bg-red-100 p-1 rounded-lg",
-                              course.optional && "bg-green-100"
+                              course.optional && "bg-blue-100",
+                              course.important && "bg-teal-100"
                             )}
                           >
                             <div>{course.title}</div>
@@ -397,6 +433,24 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+
+        <div className="w-full bg-slate-200 font-medium rounded-lg text-black  p-10 flex flex-col gap-5 text-[18px]">
+          <div className="border-b-2 border-slate-400 text-center">
+            Choose a Path
+          </div>
+
+          <div className="flex justify-around px-44">
+            <div>
+              <div>Get Full Time Internship</div>
+              <div>Exit with Diploma</div>
+              <div>Take a 2 year break from Degree</div>
+            </div>
+            <div>
+              <div>Choose a Speciation</div>
+              <div>Choose Electives</div>
+            </div>
+          </div>
+        </div>
 
         <Card className="bg-yellow-800  my-5">
           <CardHeader>
@@ -419,7 +473,8 @@ export default function Home() {
                           <div
                             className={cn(
                               "font-medium bg-red-100 p-1 rounded-lg",
-                              course.optional && "bg-green-100"
+                              course.optional && "bg-blue-100",
+                              course.important && "bg-teal-100"
                             )}
                           >
                             <div>{course.title}</div>
@@ -455,7 +510,8 @@ export default function Home() {
                           <div
                             className={cn(
                               "font-medium bg-red-100 p-1 rounded-lg",
-                              course.optional && "bg-green-100"
+                              course.optional && "bg-blue-100",
+                              course.important && "bg-teal-100"
                             )}
                           >
                             <div>{course.title}</div>
