@@ -177,7 +177,7 @@ export default function Home() {
       title: "Term 6",
       courses: [
         {
-          title: "Fundamentals of Web Development",
+          title: "App/Web Development 303",
         },
         {
           title: "Discrete mathematics",
