@@ -129,7 +129,7 @@ export default function Home() {
         },
 
         {
-          title: "Elective 1",
+          title: "Elective 2",
           optional: true,
         },
       ],
@@ -146,12 +146,10 @@ export default function Home() {
           important: true,
         },
         {
-          title: "Internet 101",
+          title: "App/Web Development 101",
         },
-
         {
-          title: "Elective 2",
-          optional: true,
+          title: "Productivity and Work Efficiency",
         },
       ],
     },
@@ -166,11 +164,7 @@ export default function Home() {
           title: "Python and Machine Learning",
         },
         {
-          title: "Productivity and Work Efficiency",
-        },
-        {
-          title: "Elective ",
-          optional: true,
+          title: "App/Web Development 202",
         },
         {
           title: "Elective 3",
@@ -193,7 +187,7 @@ export default function Home() {
           important: true,
         },
         {
-          title: "Elective 6",
+          title: "Elective 4",
           optional: true,
         },
       ],
@@ -332,7 +326,7 @@ export default function Home() {
         </div>
       </Wrapper>
       <Wrapper>
-        <div className="text-center">{`BTech in Computer Science with {major} and {minor}`}</div>
+        <div className="text-center">{`BS in Computer Science with {major} and {minor}`}</div>
       </Wrapper>
       <Wrapper>
         <div>Majors</div>
