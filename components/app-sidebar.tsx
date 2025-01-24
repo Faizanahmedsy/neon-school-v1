@@ -64,6 +64,11 @@ const data = {
       ],
     },
     {
+      title: "User Management",
+      url: "#",
+      icon: ChatBubbleIcon,
+    },
+    {
       title: "Models",
       url: "#",
       icon: Bot,
